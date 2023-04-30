@@ -1,0 +1,92 @@
+<div class="modal-header">
+    <h5 class="textomodal">Asignaciones</h5>
+    <button type="button" class="btn-close" aria-label="Close"  (click)="cerrar()"></button>
+  </div>
+  <form>
+    <div class="modal-body">
+  
+  
+  
+      <div id="carouselExampleControls" class="carousel slide" data-bs-touch="false">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+
+            <div class="marco">
+                <div class="mb-3 ps-5 pe-5">
+        
+        
+                  <li class="listas">
+                    <p><strong class="me-3">Nombre Y aplellidos:</strong>Informacion Actual</p>
+                  </li>
+                </div>
+                <div class="mb-3 ps-5 pe-5">
+                  <label class="form-label">Asignador</label>
+                  <input type="text" class="form-control" placeholder="informacion actual">
+                </div>
+        
+                <div class="mb-3 ps-5 pe-5">
+                  <label class="form-label">Serial</label>
+                  <input type="text" class="form-control" placeholder="Serial">
+                </div>
+                <div class="mb-3 ps-5 pe-5">
+                  <label class="form-label">Fecha de vencimiento</label>
+                  <input type="text" class="form-control" placeholder="Serial">
+        
+                  <div class="mb-3 ps-5 pe-5 mt-3 text-center">
+                    <button type="submit" class="btn btn-primary" data-bs-target="#carouselExampleControls"
+                      data-bs-slide="next">Firmar</button>
+        
+                  </div>
+        
+                </div>
+        
+        
+        
+              </div>
+
+          </div>
+
+          <div class="carousel-item">
+      
+            <div class="marco">
+              <div class="mb-3 ps-5 pe-5">
+                <div class="d-flex justify-content-center">
+                  <ul>
+                    <li class="listas">
+                      <table>
+                        <tr>
+                          <td><i class="fa-solid fa-clipboard-check  fa-3x me-3" style="color: #ff4d4d;"></i></td>
+                          <td>
+                            <small>La solicitud se revoco o cancelo con exito</small>
+                            <p>Ahora puede asignar una nueva solicitud</p>
+                          </td>
+                        </tr>
+      
+                      </table>
+                    </li>
+                    <li class="text-center">
+                      <button type="submit" 
+                              class="btn btn-primary" 
+                              (click)="cerrar()">Aceptar</button>
+      
+                    </li>
+                  </ul>
+      
+      
+                </div>
+      
+      
+              </div>
+            </div>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  
+  
+    <form>
+  
+      <div class="modal-footer">
+  
+        </div>

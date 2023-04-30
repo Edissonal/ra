@@ -1,0 +1,43 @@
+<div class="modal-header">
+    <h5 class="textomodal"
+    >Modificacion de campos</h5>
+    <button type="button" class="btn-close" aria-label="Close" (click)="cerrar()"></button>
+  </div>
+  <form>
+  <div class="modal-body">
+
+        <div class="marco">
+        <div class="mb-3 ps-5 pe-5">
+
+
+<li class="listas"><p><strong class="me-3">Campo:</strong>Informacion Actual</p></li>
+        </div>
+        <div class="mb-3 ps-5 pe-5">
+            <label 
+            class="form-label">Informacion Nueva</label>
+                 <input type="text" 
+                 class="form-control"
+                 placeholder="informacion actual">
+        </div>
+
+        <div class="mb-3 ps-5 pe-5">
+            <label 
+            class="form-label">Observaciones</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+
+    </div>
+
+  </div>
+  <div class="modal-footer">
+    <button type="button"
+            class="btn btn-secondary"
+            (click)="cerrar()"
+    >Cancelar</button>
+
+    <button type="button"
+            class="btn btn-primary"
+            (click)="cerrar()"
+           >Aceptar</button>
+  </div>
+  <form>

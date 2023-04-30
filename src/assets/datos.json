@@ -1,0 +1,368 @@
+{
+
+   "preguntas":[{
+            "id":1,
+            "pregunta":"Necesita un certificado para firmas documentos"
+        },
+        {
+            "id":2,
+            "pregunta":"Trabaja en una entidad bancaria"
+        },
+        {
+             "id":3,
+            "pregunta":"El tipo de token que necesita es fisico o virtual"
+        }
+    ],
+	"descuentos":[
+{
+	"id":10,
+	"codigo":"descuento133",
+	"costo":120000
+},
+{  
+	"id":12,
+	"codigo":"certi20223",
+	"costo":140000
+}
+],"noradicado":[{
+	
+"id":1,
+"nopedido":12345
+}],
+
+      "politicas":[{
+            "id":1,
+            "politica":"Token físico funcionario Certicámara",
+            "desciption":"Mariana es la representante legal de una entidad financiera.Ella está de viaje, pero con su firma digital puede reportar los informes ante el órgano de control que los vigila.",
+			"vigencia": [1,2,3,4]
+        },
+        {
+            "id":2,
+            "politica":"Token físico viaje Ocasional Runt",
+            "desciption":"Camilo es el contador de una entidad de salud y firma digitalmente los estados financieros para enviárselos al representante legal.",
+			"vigencia": [1,2,3]
+        },
+        {
+            "id":3,
+            "politica":"Token virtual Certifirma web",
+            "desciption":"Juan Pablo envía su recurso de apelación al Juzgado firmado digitalmente, sin necesidad de desplazarse hasta el lugar.",
+			"vigencia": [1,2]
+        },
+		
+		   {
+            "id":4,
+            "politica":"Token virtual  Revisoria fiscal",
+            "desciption":"Hernán es funcionario público. Él es el encargado de manejar el presupuesto de la entidad. Para aprobar compras y proyectos usa su firma digital a fin de que éstos sean avalados ante el ente de control.",
+			"vigencia": [1,2,3]
+        }
+    ],
+	
+	
+	      "historial":[
+		  {
+            "id":1,
+            "cedula":"1073680979",
+			"politica":"Token virtual Revisoria fiscal",
+			"tipo":"físico",
+            "fecha":"13-04-2016"
+        },
+        {
+            "id":2,
+            "cedula":"1073680978",
+			"politica":"token virtual Certifirma web",
+			"tipo":"virtual",
+            "fecha":"13-04-2018"
+        },
+        {
+            "id":3,
+            "cedula":"1073680978",
+			"politica":"Token virtual Certifirma web",
+			"tipo":"virtual",
+            "fecha":"13-04-2016"
+        },
+		
+		   {
+            "id":3,
+            "cedula":"1073680979",
+			"tipo":"físico",
+			"politica":"Token virtual Revisoria fiscal",
+            "fecha":"13-04-2018"
+        }
+    ],
+	
+	 "reportados":[
+		  {
+            "id":1,
+            "cedula":1073680979,
+			"reportado":false
+        },
+			  {
+            "id":1,
+            "cedula":1073680978,
+			"reportado":false
+        },
+	      {
+            "id":1,
+            "cedula":1073680977,
+			"reportado":true
+        }
+		],
+	
+	 "precios":[
+		  {
+            "id":1,
+            "nombre":"token fisico",
+			"precio":125000,
+			"impuestos":16000
+        },
+			  {
+            "id":2,
+            "nombre":"token virtual",
+			"precio":130000,
+			"impuestos":16000
+        },
+	      {
+            "id":3,
+            "nombre":"PKCS#10",
+			"precio":127000,
+			"impuestos":16000
+        }
+		],
+		
+	 "indicativos":[
+	 {
+  "nomDepartamento": "ANTIOQUIA",
+  "codIndicativoNacional": 4,
+  "indicativo": 604
+ },
+ {
+  "nomDepartamento": "ATLÁNTICO",
+  "codIndicativoNacional": 5,
+  "indicativo": 605
+ },
+ {
+  "nomDepartamento": "BOGOTÁ D.C.",
+  "codIndicativoNacional": 1,
+  "indicativo": 601
+ },
+ {
+  "nomDepartamento": "BOLÍVAR",
+  "codIndicativoNacional": 5,
+  "indicativo": 605
+ },
+ {
+  "nomDepartamento": "BOYACÁ",
+  "codIndicativoNacional": 8,
+  "indicativo": 608
+ },
+ {
+  "nomDepartamento": "CALDAS",
+  "codIndicativoNacional": 6,
+  "indicativo": 606
+ },
+ {
+  "nomDepartamento": "CAQUETÁ",
+  "codIndicativoNacional": 8,
+  "indicativo": 608
+ },
+ {
+  "nomDepartamento": "CAUCA",
+  "codIndicativoNacional": 2,
+  "indicativo": 602
+ },
+ {
+  "nomDepartamento": "CESAR",
+  "codIndicativoNacional": 5,
+  "indicativo": 605
+ },
+ {
+  "nomDepartamento": "CÓRDOBA",
+  "codIndicativoNacional": 4,
+  "indicativo": 604
+ },
+ {
+  "nomDepartamento": "CUNDINAMARCA",
+  "codIndicativoNacional": 1,
+  "indicativo": 601
+ },
+ {
+  "nomDepartamento": "CHOCO",
+  "codIndicativoNacional": 4,
+  "indicativo": 604
+ },
+ {
+  "nomDepartamento": "HUILA",
+  "codIndicativoNacional": 8,
+  "indicativo": 608
+ },
+ {
+  "nomDepartamento": "GUAJIRA",
+  "codIndicativoNacional": 5,
+  "indicativo": 605
+ },
+ {
+  "nomDepartamento": "MAGDALENA",
+  "codIndicativoNacional": 5,
+  "indicativo": 605
+ },
+ {
+  "nomDepartamento": "META",
+  "codIndicativoNacional": 8,
+  "indicativo": 608
+ },
+ {
+  "nomDepartamento": "NARIÑO",
+  "codIndicativoNacional": 2,
+  "indicativo": 602
+ },
+ {
+  "nomDepartamento": "NORTE DE SANTANDER",
+  "codIndicativoNacional": 7,
+  "indicativo": 607
+ },
+ {
+  "nomDepartamento": "QUINDÍO",
+  "codIndicativoNacional": 6,
+  "indicativo": 606
+ },
+ {
+  "nomDepartamento": "RISARALDA",
+  "codIndicativoNacional": 6,
+  "indicativo": 606
+ },
+ {
+  "nomDepartamento": "SANTANDER",
+  "codIndicativoNacional": 7,
+  "indicativo": 607
+ },
+ {
+  "nomDepartamento": "SUCRE",
+  "codIndicativoNacional": 5,
+  "indicativo": 605
+ },
+ {
+  "nomDepartamento": "TOLIMA",
+  "codIndicativoNacional": 8,
+  "indicativo": 608
+ },
+ {
+  "nomDepartamento": "VALLE DEL CAUCA",
+  "codIndicativoNacional": 2,
+  "indicativo": 602
+ },
+ {
+  "nomDepartamento": "ARAUCA",
+  "codIndicativoNacional": 7,
+  "indicativo": 607
+ },
+ {
+  "nomDepartamento": "CASANARE",
+  "codIndicativoNacional": 8,
+  "indicativo": 608
+ },
+ {
+  "nomDepartamento": "PUTUMAYO",
+  "codIndicativoNacional": 8,
+  "indicativo": 608
+ },
+ {
+  "nomDepartamento": "SAN ANDRÉS Y PROVIDENCIA",
+  "codIndicativoNacional": 8,
+  "indicativo": 608
+ },
+ {
+  "nomDepartamento": "AMAZONAS",
+  "codIndicativoNacional": 8,
+  "indicativo": 608
+ },
+ {
+  "nomDepartamento": "GUAINÍA",
+  "codIndicativoNacional": 8,
+  "indicativo": 608
+ },
+ {
+  "nomDepartamento": "GUAVIARE",
+  "codIndicativoNacional": 8,
+  "indicativo": 608
+ },
+ {
+  "nomDepartamento": "VAUPÉS",
+  "codIndicativoNacional": 8,
+  "indicativo": 608
+ },
+ {
+  "nomDepartamento": "VICHADA",
+  "codIndicativoNacional": 8,
+  "indicativo": 608
+ }
+			 
+			 ]
+,"nopedido":[{
+	
+"id":1,
+"nopedido":1233355
+}],
+
+"documento":[{
+"id":1,
+"nopedido":"../../../../assets/Formato de Orden de Pedido.pdf"
+}],
+
+"crmusuario":[{
+"numero": 1073680971,
+"nombres": "marcela ",
+"apellidos": "rivas",
+"correo": "edissonalonso@gmail.com",
+"correo1":"edissonalonso@gmail.com"
+}],
+
+"crmcontacto":[{
+"numero": 1073680971,
+"nombres": "marcela ",
+"apellidos": "rivas",
+"cargo": "rivas",
+"correo": "edissonalonso@gmail.com",
+"celular":3142082530,
+"indicativo":601,
+"telefono":3142082530,
+"extenxion":111111
+
+}],
+
+"crmentrega":[{
+"numero": 1073680971,
+"correo": "edissonalonso@gmail.com",
+"celular":3142082530,
+"indicativo":601,
+"telefono":3142082530,
+"extenxion":111111
+
+}],
+"crmfacturacion":[{
+   "numero": 1073680971,
+    "nit": 102222288,
+    "razon": "pepecierra",
+    "direccionp": "cra 10 No 28-35",
+    "telefono": 3142082530,
+    "extenxion": "111111",
+    "celular": 3142082530,
+    "correo": "edissonalonso@gmail.com",
+    "regimentributario": "Gran Contribuyente.",
+	"indicativo":601,
+    "codigo": 601,
+    "capital": "Privado"
+}],
+
+"crmentregaf":[{
+  "numero": 1073680971,
+   "direccionp":  "cra 10 No 28-35",
+    "departamento": 137,
+    "municipio":602,
+    "celular": 3142082530,
+    "indicativo": 3142082530,
+    "telefono": "3142082520",
+    "extenxion": 333333
+}]
+
+
+}

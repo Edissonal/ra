@@ -1,0 +1,332 @@
+<section style="background-color: #f8f7f5;" class="animate__animated animate__fadeIn d-flex flex-column min-vh-100">
+
+    <div class="container">
+        <div class="mains">
+            <h2>Revision de documetos</h2>
+
+
+            <div class="d-flex justify-content-center">
+
+
+                <div class="d-flex flex-column">
+                    <div class="p-2">
+                        <h3 class="text-center">Informacion de Empresa</h3>
+
+                        <div>
+
+                            <table class="tabla">
+                                <tr>
+
+                                    <td><strong>Nit de empresa</strong></td>
+                                    <td class="margen">{{datos?.datosEmpresa?.Nitempresa}}</td>
+                                </tr>
+                                <tr>
+
+                                    <td><strong>Empresa</strong></td>
+                                    <td class="margen">{{datos?.datosEmpresa?.empresa}}</td>
+                                </tr>
+                                <tr>
+
+                                    <td><strong>Direccion</strong></td>
+                                    <td class="margen">{{datos?.datosEmpresa?.direccion}}</td>
+                                    <td class="margen icono" (click)="ventana()"><i class="fa-solid fa-square-pen"></i>
+                                    </td>
+                                </tr>
+                                <tr>
+
+                                    <td><strong>Departamento</strong></td>
+                                    <td class="margen">{{datos?.datosEmpresa?.departamento}}</td>
+                                    <td class="margen icono" (click)="ventana()"><i class="fa-solid fa-square-pen"></i>
+                                    </td>
+                                </tr>
+                                <tr>
+
+                                    <td><strong>Ciudad</strong></td>
+                                    <td class="margen">{{datos?.datosEmpresa?.ciudad}}</td>
+                                    <td class="margen icono" (click)="ventana()"><i class="fa-solid fa-square-pen"></i>
+                                    </td>
+                                </tr>
+                                <tr *ngFor="let ele of datos?.datosEmpresa?.documentosAnexos">
+
+                                    <td><strong>Documento Anexos:</strong></td><td>{{ele.nombreDocumento}}                                    </td>
+              
+                                    <td>
+                                        <div id="div_file" class="text-center">
+                                        <input type="file" id="enviar" 
+                                        #enviar>
+                                        <p id="texto"><i class="fa-solid fa-cloud-arrow-up me-1"></i>Subir Archivo</p>
+                                    </div>
+                                    </td>
+                                    <td><p class="ms-5 rechazo" (click)="open(content)"><i class="fa-solid fa-trash-can-arrow-up ms-3 icono fa-2x"></i> rechazar documento</p></td>                
+                                </tr>
+                                <tr>
+
+                                    <td><strong>Consultar listas</strong></td>
+                                    <td class="margen" (click)="listasOpen()">consultar <i class="fa-solid fa-magnifying-glass ms-4 icono"></i></td>
+                                </tr>
+                            </table>
+
+
+                        </div>
+
+
+                    </div>
+          
+                </div>
+            </div>
+
+        </div>
+
+        <div class="mains">
+
+          <div class="p-2">
+                        <h3 class="text-center">Informacion solicitante</h3>
+                        <table class="tabla">
+                            <tr>
+                                <td><strong>Correo electronico</strong></td>
+                                <td class="margen">{{datos?.informacionSolicitante?.correoElectronico}}</td>
+                            </tr>
+                            <tr>
+
+                                <td><strong>Tipo identificacion</strong></td>
+                                <td class="margen">{{datos?.informacionSolicitante?.tipoIdentificacion}}</td>
+                            </tr>
+                            <tr>
+
+                                <td><strong>identificacion</strong></td>
+                                <td class="margen">{{datos?.informacionSolicitante?.identificacion}}</td>
+                            </tr>
+                            <tr>
+
+                                <td><strong>Nombre titular</strong></td>
+                                <td class="margen">{{datos?.informacionSolicitante?.nombreTitular}}</td>
+                            </tr>
+                            <tr>
+
+                                <td><strong>Cargo</strong></td>
+                                <td class="margen">{{datos?.informacionSolicitante?.cargo}}</td>
+                            </tr>
+              
+                            <tr *ngFor="let ele of datos?.informacionSolicitante?.documentosAnexos">
+
+                                <td><strong>Documento Anexos:</strong></td><td>{{ele.nombreDocumento}}</td>
+              
+                                    <td>
+                                        <div id="div_file" class="text-center">
+                                        <input type="file" id="enviar" 
+                                        #enviar>
+                                        <p id="texto"><i class="fa-solid fa-cloud-arrow-up me-1"></i>Subir Archivo</p>
+                                    </div>
+                                    
+                                    </td>
+                                    <td><p class="ms-5 rechazo" (click)="open(content)"><i class="fa-solid fa-trash-can-arrow-up ms-3 icono fa-2x"></i> rechazar documento</p></td>                
+                            </tr>
+                            <tr>
+
+                                <td><strong>Consultar listas</strong></td>
+                                <td class="margen" (click)="listasOpen()">consultar <i class="fa-solid fa-magnifying-glass ms-4 icono"></i></td>
+                            </tr>
+                            <tr>
+
+                                <td><strong>Correos Asociados</strong></td>
+                                <td class="margen" 
+                                    (click)="openCorreos(asociados)"><i class="fa-solid fa-envelopes-bulk ms-4 me-4 icono fa-2x"></i>Adjuntar documento</td>
+                            </tr>
+                            
+                            
+                        </table>
+
+                    </div> 
+        </div>
+
+        <div class="mains">
+            <h3 class="text-center">Estado Solicitud</h3>
+
+        <div class="row">
+            <div class="col-lg-3 col-md"></div>
+            <div class="col">    
+                <div class="mb-3 ps-5 pe-5">
+        
+        
+                <li class="listas">
+                  <p><strong class="me-3">Proyecto:</strong>Tipo certificado</p>
+                </li>
+              </div>
+             
+              <div class="mb-3 ps-5 pe-5">
+                <label class="form-label">Conpseto usuario</label>
+                <select class="form-select form-select-sm mb-2" aria-label=".form-select-sm example">
+                  <option selected>Opciones</option>
+                  <option value="1">rechazado</option>
+                  <option value="2">negado</option>
+                </select>
+              </div>
+              <div class="mb-3 ps-5 pe-5">
+                <label class="form-label">Observaciones</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+      
+                <div class="mb-3 ps-5 pe-5 mt-3 text-center">
+                  <button type="submit" class="btn btn-primary" data-bs-target="#carouselExampleControls"
+                    data-bs-slide="next" (click)="redirige()">Firmar</button>
+      
+                </div>
+      
+              </div>
+</div>
+        <div class="col-lg-3 col-md"></div>
+        </div>
+        </div>
+
+        <button type="button" class="btn btn-primary mb-3" 
+        (click)="reDireciona()">
+        <i class="fa-solid fa-reply-all me-2"></i>Atrás&nbsp;</button>
+    </div>
+
+    <!--<button (click)="ventana()">Prueba</button>-->
+
+
+
+ <!--implementacion de modal para rechazo de solicitudes-->
+    <ng-template #content let-modal>
+        <div class="modal-header">
+            <h5 class="textomodal">Rechazo de asignacion</h5>
+            <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+        </div>
+        <div class="modal-body">
+            <div class="marco">
+
+                <div class="mb-3 ps-5 pe-5">
+                    <div class="mb-3 ps-5 pe-5">
+        
+                        <li class="listas">
+                          <p><strong class="me-3">Nombre del documento</strong>Documento</p>
+                        </li>
+                      </div>
+                </div>
+        
+                <div class="mb-3 ps-5 pe-5">
+                    <label class="form-label">Motivo del rechazo</label>
+                    <select class="form-select form-select-sm mb-2" aria-label=".form-select-sm example">
+                      <option selected>Opciones</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                  </div>
+                  <div class="mb-3 ps-5 pe-5">
+
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          
+                    <div class="mb-3 ps-5 pe-5 mt-3 text-center">
+                      <button type="submit" class="btn btn-primary" data-bs-target="#carouselExampleControls"
+                        data-bs-slide="next"
+                        (click)="cerrar()">Aseptar</button>
+          
+                    </div>
+          
+                  </div>
+        
+        
+        
+              </div>
+        </div>
+        <div class="modal-footer">
+          
+        </div>
+    </ng-template>
+
+     <!--implementacion de modal   correos-->
+    <ng-template #asociados let-modal>
+        <div class="modal-header">
+            <h5 class="textomodal">Rechazo de asignacion</h5>
+            <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+        </div>
+        <div class="modal-body">
+    
+              <div class="marco">
+
+                <h6 class="text-center mb-3">Relacion de correo electronico</h6>
+
+                       <div class="row">
+                        <div class="col">
+                            <div class="mb-3 ps-3 pe-3">
+                                <label class="form-label">Nombre de empresa</label>
+                                <input type="text" class="form-control" placeholder="Serial">
+                              </div>
+                        </div>
+                        <div class="col">
+                            <div class="mb-3 ps-3 pe-3">
+                                <label class="form-label">Nit</label>
+                                <input type="text" class="form-control" placeholder="Serial">
+                              </div>  
+                        </div>
+
+                       </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-3 ps-3 pe-3">
+                                <label class="form-label">Orden</label>
+                                <input type="text" class="form-control" placeholder="Serial">
+                              </div>
+            
+
+                        </div>
+                        <div class="col">
+                            <div class="mb-3 ps-3 pe-3">
+                                <label class="form-label">Solicitante</label>
+                                <input type="text" class="form-control" placeholder="Serial">
+                              </div>
+            
+                        </div>
+
+                    </div>   
+
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-3 ps-3 pe-3">
+                                <label class="form-label">Correo</label>
+                                <input type="text" class="form-control" placeholder="Serial">
+                              </div>
+                        </div>
+                    </div>
+
+          <div class="row">
+            <div class="col">
+                <div class="mb-3  ps-3 pe-3">
+                    <label 
+                    class="form-label">Observaciones</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="mb-3 ps-3 pe-3 mt-3 text-center">
+                            <button type="submit" 
+                            class="btn btn-primary me-3" 
+                            (click)="cerrarMail()"
+                            >Enviar</button>
+    
+                          <button type="submit" 
+                            class="btn btn-primary ps-3"
+                            (click)="cerrarMail()"
+                            >Cancelar</button>
+              
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+
+          
+              </div>
+        </div>
+        <div class="modal-footer">
+          
+        </div>
+    </ng-template>
+
+
+
+
+</section>
+

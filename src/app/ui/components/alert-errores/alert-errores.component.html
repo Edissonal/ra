@@ -1,0 +1,22 @@
+
+<ngb-alert 
+        #staticAlert
+        [dismissible]="false"
+        [type]="type" 
+        *ngIf="staticAlertClosed" 
+        class="mb-1 animate__animated animate__fadeIn"
+        (closed)="staticAlertClosed = false">
+
+<div class="d-flex justify-content-center">
+    <i 
+    #stop
+    class="fa-solid fa-triangle-exclamation  fa-shake fa-2x"
+    style="--fa-animation-duration: 1s; --fa-animation-iteration-count: 1;--fa-animation-timing: ease-in-out;"
+    ></i>
+    <label class="mt-2 ms-3 textos" >{{ message }}</label> 
+
+</div>
+       <!--
+        [ngClass]="{'fa-solid fa-triangle-exclamation  fa-shake fa-2x': valor == true, 'fa-solid fa-triangle-exclamation fa-2x' : valor === false }" 
+    </ngb-alert> [ngClass]="staticAlertClosed == true ? 'mb-1 animate__animated animate__fadeIn' : 'mb-1 animate__animated animate__fadeOut'"-->
+</ngb-alert>

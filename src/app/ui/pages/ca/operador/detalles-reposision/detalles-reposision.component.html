@@ -1,0 +1,175 @@
+<section style="background-color: #f8f7f5;" class="animate__animated animate__fadeIn d-flex flex-column min-vh-100">
+    <div class="container">
+
+        <div class="mains">
+            <h2>Gestión reposición</h2>
+            <div class="d-flex justify-content-center">
+
+            <div class="d-flex flex-column">
+                <div class="p-2">
+                    <h3 class="text-center">Informacion de Empresa</h3>
+                    <table class="tabla">
+                        <tr>
+
+                            <td><strong>Orden pedido:</strong></td>
+                            <td class="margen">1073680979</td>
+                            <td class="margen"><strong>Tipo documento:</strong></td>
+                            <td class="margen">1073680979</td>
+                        </tr>
+                        <tr>
+
+                            <td><strong>Solicitud:</strong></td>
+                            <td class="margen">1073680979</td>
+                            <td class="margen"><strong>Identificación:</strong></td>
+                            <td class="margen">1073680979</td>
+                        </tr>
+
+                        <tr>
+
+                            <td><strong>NIT empresa:</strong></td>
+                            <td class="margen">1073680979</td>
+                            <td class="margen"><strong>Cargo:</strong></td>
+                            <td class="margen">1073680979</td>
+                        </tr>
+                        <tr>
+
+                            <td><strong>Empresa:</strong></td>
+                            <td class="margen">1073680979</td>
+                            <td class="margen"><strong>Política:</strong></td>
+                            <td class="margen">1073680979</td>
+                        </tr>
+                        <tr>
+
+                            <td><strong>Correo electrónico:</strong></td>
+                            <td class="margen"  (click)="ventana()">1073680979<i class="fa-solid fa-square-pen icono ms-3"></i></td>
+                            <td class="margen"><strong></strong></td>
+                            <td class="margen"></td>
+                        </tr>
+              
+                                </table>
+                </div>
+            </div>
+        </div>
+        </div>
+
+
+        <div class="mains">
+
+            <div class="d-flex justify-content-center">
+
+            <div class="d-flex flex-column">
+                <div class="p-2">
+                    <table class="tabla">
+                        <tr>
+
+                            <td><strong>Proyecto:</strong></td>
+                            <td class="margen">1073680979</td>
+                            <td class="margen"><strong>Fecha aprobación:</strong></td>
+                            <td class="margen">1073680979</td>
+                        </tr>
+                        <tr>
+
+                            <td><strong>Días de vigencia:</strong></td>
+                            <td class="margen">1073680979</td>
+                            <td class="margen"><strong>Usuario aprobación:</strong></td>
+                            <td class="margen">1073680979</td>
+                        </tr>
+
+                        <tr>
+
+                            <td><strong>Fecha de pago:</strong></td>
+                            <td class="margen">1073680979</td>
+                            <td class="margen"><strong>Concepto usuario:</strong></td>
+                            <td class="margen">1073680979</td>
+                        </tr>
+                        <tr>
+
+                            <td><strong>Mecanismo de entrega:</strong></td>
+                            <td class="margen">
+                                <select class="form-select form-select-sm mb-2" aria-label=".form-select-sm example">
+                                    <option selected>Opciones</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                  </select>
+                            <td class="margen"><strong>Observación aprobación:</strong></td>
+                            <td class="margen">1073680979</td>
+                        </tr>
+                        <tr>
+
+                            <td><strong>Correo electrónico:</strong></td>
+                            <td class="margen">
+                                <button type="button" class="btn btn-primary  btn-sm  mb-3" (click)="trazaL(content)">
+                                 Ver <i class="fa-solid fa-magnifying-glass ms-1"></i></button>
+
+            
+
+                            </td>
+                        </tr>
+              
+                                </table>
+
+                </div>
+            </div>
+
+            
+        </div>
+        <div class="d-flex justify-content-center mt-3">
+
+            <button type="button" class="btn btn-primary mb-3" 
+             (click)="declinaciones()"   
+            >Rechazar</button>
+    
+                <button type="button" class="btn btn-primary mb-3 ms-5" (click)="showConsepto()">Asignar</button>
+
+        </div>
+        <button type="button" class="btn btn-primary mb-3" 
+        (click)="reDireciona()">
+        <i class="fa-solid fa-reply-all me-2"></i>Atrás&nbsp;</button>
+        </div>
+
+
+
+
+    </div>
+
+</section>
+
+<ng-template #content let-modal>
+    <div class="modal-header">
+        <h5 class="textomodal"
+        >Consepto del sistema</h5>
+        <button type="button" class="btn-close" aria-label="Close" (click)="closetrazaL()"></button>
+      </div>
+      <form>
+      <div class="modal-body">
+
+        <div class="marco">
+
+
+
+        <div class="mb-3 ps-5 pe-5">
+            <label 
+            class="form-label">Observaciones</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+
+    </div>
+
+  </div>
+
+  <div class="modal-footer">
+    <button type="button"
+            class="btn btn-secondary"
+            (click)="closetrazaL()"
+    >Cancelar</button>
+
+    <button type="button"
+            class="btn btn-primary"
+            (click)="closetrazaL()"
+           >Aceptar</button>
+  </div>
+</form>
+
+</ng-template>
+

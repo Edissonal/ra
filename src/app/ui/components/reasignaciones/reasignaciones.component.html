@@ -1,0 +1,153 @@
+<div class="modal-header">
+  <h5 class="textomodal">Reasignaciones de tareas</h5>
+  <button type="button" class="btn-close" aria-label="Close" (click)="cerrar()"></button>
+</div>
+<form   (ngSubmit)="envioDatos()" autocomplete="off" [formGroup]="Reasignaform">
+  <div class="modal-body">
+
+
+
+    <div id="carouselExampleControls"
+         class="carousel slide" 
+         data-bs-touch="false">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="marco">
+
+              <h6 class="text-center mb-3">Seleccione el proceso que desea realizar</h6>
+
+                     <div class="row">
+                      <div class="col">
+                          <div class="mb-3 ps-3 pe-3">
+                              <label class="form-label">Solicitud</label>
+                              <input type="text" 
+                                    class="form-control" 
+                                    placeholder="informacion actual"
+                                    name="solicitud"
+                                    formControlName="solicitud"
+                                    [(ngModel)]="data.solicitud">
+                              
+                            </div>
+                      </div>
+                      <div class="col">
+                          <div class="mb-3  ps-3 pe-3">
+                              <label class="form-label">Nombres Apellidos:</label>
+                              <input type="text" 
+                                    class="form-control"
+                                    formControlName="empresa"
+                                    [(ngModel)]="data.empresa"
+                                    >
+                            </div>    
+                      </div>
+
+                     </div>
+
+                  <div class="row">
+                      <div class="col">
+                          <div class="mb-3 ps-3 pe-3">
+                              <label class="form-label">Número identidad:</label>
+                              <input type="text" 
+                                     class="form-control" 
+                                     placeholder="Serial"
+                                     formControlName="documento"
+                                     [(ngModel)]="data.documento"
+                                     >
+                          </div>
+          
+
+                      </div>
+                      <div class="col">
+                          <div class="mb-3  ps-3 pe-3">
+                              <label class="form-label">Tipo certificado:</label>
+                              <input type="text" 
+                                     class="form-control" 
+                                     placeholder="Serial"
+                                     formControlName="certificado"
+                                     [(ngModel)]="data.certificado"
+                                     >
+                          </div>
+          
+                      </div>
+
+                  </div>   
+
+                  <div class="row">
+                      <div class="col">
+                          <div class="mb-3  ps-3 pe-3">
+                              <label class="form-label">Fecha:</label>
+                              <input type="text" 
+                                     class="form-control" 
+                                     formControlName="fechai"
+                                     [(ngModel)]="data.fechai">
+                          </div>
+                      </div>
+                  <div class="col">
+                      <div class="mb-3 ps-3 pe-3">
+                          <label class="form-label">Estado:</label>
+                          <input type="text" 
+                          class="form-control" 
+                          formControlName="estado"
+                          [(ngModel)]="data.estado">
+                      </div> 
+                  </div>
+                  </div>
+
+        <div class="row">
+          <div class="col">
+              <div class="mb-3  ps-3 pe-3">
+                  <label 
+                  class="form-label">Usuario</label>
+                  <input type="text" 
+                         class="form-control"
+                         formControlName="usuario"
+                          [(ngModel)]="data.usuario">
+              </div>
+
+              <div class="mb-3  ps-3 pe-3">
+                <label 
+                class="form-label">Motivo</label>
+
+                <textarea class="form-control" 
+                          [class.is-invalid]="campoEsValido('motivo')"
+                           rows="3"
+                          formControlName="motivo"
+                           ></textarea>
+
+          <div  class="form-text text-danger animate__animated animate__fadeIn animate__fast"
+                           *ngIf="campoEsValido('motivo')">El motivo es válido</div>
+            </div>
+              <div class="row">
+                  <div class="col">
+                      <div class="mb-3 ps-3 pe-3 mt-3 text-center">
+                          <button type="submit" 
+                          class="btn btn-primary me-3" 
+                          (click)="cerrar()"
+                          >Cancelar</button>
+  
+                        <button type="submit" 
+                          class="btn btn-primary ps-3"
+                          >Tomar tarea</button>
+            
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+
+        
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+
+    </div>
+
+
+
+  <form>
+
+    <div class="modal-footer">
+
+      </div>

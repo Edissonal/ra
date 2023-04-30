@@ -1,0 +1,174 @@
+
+
+<form  (ngSubmit)="buscar()" 
+        [formGroup]="busquedasForm">
+<!-- <div class="row mb-5">-->
+ <div class="row mb-2">
+
+    <div class="col">
+
+        <div class="mb-3">
+
+                <label class="form-label">Solicitud</label>
+                <input type="number" 
+                       id="form-control" 
+                       autocomplete="off" 
+                       class="form-control ml-4"
+                       placeholder="palabra clave"
+                       formArrayName="solicitud"
+                       formControlName="solicitud"
+                       #palabra
+                       [class.is-invalid]="camposvalidos('solicitud')"
+                       (keyup)="caracTeres(palabra.value)"  
+                       >
+        </div>
+    </div>
+
+<ng-template  [ngIf]="vista == true">
+
+    <div class="col">
+
+        <div class="mb-3">
+
+                <label class="form-label">Proceso</label>
+                <input class="form-control" 
+                list="datalistOptions" 
+                id="exampleDataList" 
+                placeholder="perfil"
+                formControlName="filtros"
+                [(ngModel)]="filtros">
+         <datalist id="datalistOptions">
+           <option value="Asignacion">
+           <option value="Revocacion">
+         </datalist>
+        </div>
+    </div>
+</ng-template>
+
+    <div class="col">
+
+        <div class="mb-3">
+            <label class="form-label">Tareas desde</label>
+            <div class="input-group">
+                <input
+                    class="form-control "
+                    placeholder="yyyy-mm-dd"
+                    autocomplete="off"
+                    ngbDatepicker
+                    #da="ngbDatepicker"
+                    #data
+                    [(ngModel)]="fechaini"
+                    formControlName="fechai"
+                    [class.is-invalid]="camposvalidos('fechai')"
+                    (keyup)="fechas(data.value)"
+
+                />
+                <button class="btn btn btn-primary bi bi-calendar3" 
+                        (click)="da.toggle()" 
+                        type="button">  <i class="far fa-calendar-alt"></i></button>
+                        
+
+        </div>
+        </div>
+        </div>
+
+
+
+        <div class="col">
+            <label class="form-label">Fecha hasta</label>
+                <div class="input-group">
+                    <input
+                    class="form-control "
+                    placeholder="yyyy-mm-dd"
+                    autocomplete="off"
+                    ngbDatepicker
+                    #db="ngbDatepicker"
+                    #data2
+                    [(ngModel)]="fechafi"
+                    formControlName="fechafi"
+                    [class.is-invalid]="camposvalidos('fechafi')"
+                    (keyup)="fechas(data2.value)"
+                    />
+                    <button class="btnbtn btn btn-primary  bi bi-calendar3"  
+                    (click)="db.toggle()" type="button">  
+                    <i class="far fa-calendar-alt"></i></button>
+        
+            </div>
+        </div>
+    
+      <!--  <div [ngClass]="alerta" class="alert" role="alert">
+            This is a primary alert—check it out!
+          </div>
+-->
+
+
+<div class="col">
+                <label class="form-label">&nbsp;</label>
+                <div class="input-group">
+                <button 
+                class="btn btn-primary"
+                >Buscar</button>
+            </div>
+            </div>
+
+            <app-alert-errores  [message]="messageError"></app-alert-errores>
+</div>
+
+</form>
+
+<div class="row">
+
+    <div class="col mb-5">
+
+
+        <div class="d-flex flex-row bd-highlight mb-3">
+            <div class="p-2 bd-highlight"><i class="fa-solid fa-rocket fa-3x colores"></i></div>
+            <div class="p-2 bd-highlight mt-3"><h5 >Tareas sin asignar</h5></div>
+            <div class="p-2 bd-highlight mt-2" *ngIf="vista"><div class="tareasad"><p class="text-center">1000</p></div></div>
+            <div class="p-2 bd-highlight mt-2"    (click)="tareasPendientes();cambiarFlag();rotaElemento();animaListas()">
+                <i
+                #anima
+                id="circulo"
+                class="fa-solid fa-arrows-spin  fa-2x   colores pru  "  style="--fa-animation-duration: 0.5s; --fa-animation-iteration-count: 1; --fa-animation-timing: ease-in-out;"></i></div>
+        </div>
+
+        <div #tarjeta
+             id="tarjeta">
+     <app-tarjetas    [items]="items"  ></app-tarjetas>
+      </div>
+    </div>
+
+
+    <div class="col mb-5">
+
+        <div class="d-flex flex-row bd-highlight mb-3">
+            <div class="p-2 bd-highlight"><i class="fa-solid fa-bullhorn fa-3x colores"></i></div>
+            <div class="p-2 bd-highlight mt-3"><h5>Tareas para mi</h5></div>
+            <div class="p-2 bd-highlight mt-2" *ngIf="vista"><div class="tareasad"><p class="text-center">1000</p></div></div>
+          </div>
+
+
+
+        <app-tarjetas  [items]="itemsPen" ></app-tarjetas>
+
+    
+    </div>
+    <div class="col">       
+        <div class="d-flex flex-row bd-highlight mb-3">
+            <div class="p-2 bd-highlight"><i class="fa-solid fa-sheet-plastic fa-3x colores"></i></div>
+            <div class="p-2 bd-highlight mt-3"><h5>Tareas asignadas CA</h5></div>
+          </div>
+        
+        </div>    
+
+</div>
+
+
+<button type="button" class="btn btn-primary mb-3"  
+        (click)="reDireciona()"
+        *ngIf="vista"
+        ><i class="fa-solid fa-reply-all me-2"></i>Atrás&nbsp;</button>
+
+
+        
+

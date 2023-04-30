@@ -1,0 +1,140 @@
+<section style="background-color: #f8f7f5;" class="animate__animated animate__fadeIn d-flex flex-column min-vh-100">
+    <div class="container">
+
+        <div class="mains">
+            <h2>Gestión reposición</h2>
+            <div class="d-flex justify-content-center">
+
+            <div class="d-flex flex-column">
+                <div class="p-2">
+                    <h3 class="text-center">Orden de pedido antigua</h3>
+                    <table class="tabla">
+                        <tr>
+
+                            <td><strong>Solicitud:</strong></td>
+                            <td class="margen">
+                                <table>
+                                    <tr><td><input type="text" class="form-control form-control-sm" ></td><td><button class="btn btn-primary  btn-sm">Buscar</button></td></tr>
+                                </table>
+                                </td>
+                            <td class="margen"></td>
+                            <td class="margen"></td>
+                        </tr>
+                        <tr>
+
+                            <td><strong>Orden pedido:</strong></td>
+                            <td class="margen">1073680979</td>
+                            <td class="margen"><strong>Tipo documento:</strong></td>
+                            <td class="margen">1073680979</td>
+                        </tr>
+
+                        <tr>
+
+                            <td><strong>Solicitud::</strong></td>
+                            <td class="margen">1073680979</td>
+                            <td class="margen"><strong>Identificación:</strong></td>
+                            <td class="margen">1073680979</td>
+                        </tr>
+                        <tr>
+
+                            <td><strong>Empresa:</strong></td>
+                            <td class="margen">1073680979</td>
+                            <td class="margen"><strong>Política:</strong></td>
+                            <td class="margen">1073680979</td>
+                        </tr>
+                        <tr>
+
+                            <td><strong>Correo electrónico:</strong></td>
+                            <td class="margen" >1073680979</td>
+                            <td class="margen"><strong>Carta</strong></td>
+                            <td class="margen"></td>
+                        </tr>
+              
+                                </table>
+                                
+                             
+
+                                <div class="d-flex justify-content-center">
+
+                                    <button class="btn btn-primary mt-5" (click)="revoca()">Revocar</button>
+                                </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <div class="mains">
+            <div class="d-flex justify-content-center">
+
+            <div class="d-flex flex-column">
+                <div class="p-2">
+                    <h3 class="text-center">Orden de pedido Nueva</h3>
+                    <table class="tabla">
+                        <tr>
+
+                            <td><strong>Orden pedido:</strong></td>
+                            <td class="margen">
+                                <table>
+                                    <tr><td>1073680979</td><td></td></tr>
+                                </table>
+                                </td>
+                            <td class="margen"><strong>Tipo documento:</strong></td>
+                            <td class="margen"></td>
+                        </tr>
+                        <tr>
+
+                            <td><strong>Solicitud:</strong></td>
+                            <td class="margen">1073680979</td>
+                            <td class="margen"><strong>Identificación:</strong></td>
+                            <td class="margen">1073680979</td>
+                        </tr>
+
+                        <tr>
+
+                            <td><strong>NIT empresa:</strong></td>
+                            <td class="margen">1073680979</td>
+                            <td class="margen"><strong>Cargo:</strong></td>
+                            <td class="margen">1073680979</td>
+                        </tr>
+                        <tr>
+
+                            <td><strong>Empresa:</strong></td>
+                            <td class="margen">1073680979</td>
+                            <td class="margen"><strong>Política:</strong></td>
+                            <td class="margen">1073680979</td>
+                        </tr>
+                        <tr>
+
+                            <td><strong>Correo electrónico:</strong></td>
+                            <td class="margen" >1073680979</td>
+                            <td class="margen"><strong>Nombre titular</strong></td>
+                            <td class="margen"></td>
+                        </tr>
+              
+                                </table>
+                                <div class="d-flex justify-content-center">
+                                    <button class="btn btn-primary mt-5"  
+                                            (click)="trazaL()">Asignar</button>
+                                </div>
+                </div>
+            </div>
+        </div>
+
+        <button type="button" class="btn btn-primary mb-3" 
+        (click)="reDireciona()">
+        <i class="fa-solid fa-reply-all me-2"></i>Atrás&nbsp;</button>
+        </div>
+
+    </div>
+
+</section>
+
+<ng-template #content let-modal>
+    <div class="modal-header">
+        <h5 class="textomodal"
+        >Consepto del sistema</h5>
+        <button type="button" class="btn-close" aria-label="Close" (click)="closetrazaL()"></button>
+      </div>
+
+</ng-template>
+

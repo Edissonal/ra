@@ -1,0 +1,525 @@
+/* You can add global styles to this file, and also import other style files */
+/*fuentes*/
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+
+body {
+    /*background-image: url('/assets/imgs/fondo.png');*/
+    background-image: url('/assets/imgs/fondo-claro.svg');
+    /* Full height */
+    background-color: #ffffff !important;
+    height: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+
+
+@font-face {
+    font-family: corisandebold;
+    src: url(../src/assets/fonts/corisandebold/corisandebold.ttf);
+
+}
+
+@font-face {
+    font-family: CalibriBold;
+    src: url(../src/assets/fonts/calibri/Calibri_Bold.ttf);
+}
+
+@font-face {
+    font-family: CalibriRegular;
+    src: url(../src/assets/fonts/calibri/Calibri_Regular.ttf);
+}
+
+@font-face {
+    font-family: CalibriLight;
+    src: url(../src/assets/fonts/calibri/CalibriLight.ttf);
+}
+
+@font-face {
+    font-family: HarabaraBold;
+    src: url(../src/assets/fonts/HarabaraBold/Harabara-Bold.ttf);
+}
+
+@font-face {
+    font-family: FuturaTBook;
+    src: url(../src/assets/fonts/FuturaTBook/FuturaTBook.ttf);
+}
+
+@font-face {
+
+    /*fuentes*/
+    font-family: "Volkhov-Regular";
+    src: url(assets/fonts/Volkhov-Regular.ttf) format("opentype");
+}
+
+/*titulos*/
+.title {
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 70px;
+    color: #2d3135;
+    margin-left: 100px;
+    font-family: 'Volkhov-Regular';
+    font-style: normal;
+}
+
+/*configuracion de estilos fomularios*/
+
+.margenconf {
+
+    padding-bottom: 20px;
+    background-color: #f8f7f5;
+    border-radius: 15px 15px 15px 15px;
+    padding-top: 20px;
+    // box-shadow: 0 2px 5px 1px rgb(64 60 67 / 16%) !important;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+
+}
+
+.tamano {
+    width: 450px !important;
+}
+
+.margencon {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    background-color: #fff;
+    border-radius: 15px;
+
+    .textos {
+        margin-top: 0;
+        margin-bottom: 1rem;
+        font-family: CalibriRegular;
+        // font-size: 10px;
+        text-align: center;
+    }
+
+
+}
+
+.contenedor {
+
+    background-color: #fff !important;
+}
+
+/*configuracion de titilos login*/
+.title-cetritransaccional {
+    label {
+        font-size: 25px !important;
+        margin: 0px !important;
+        font-family: 'Volkhov-Regular' !important;
+        user-drag: none;
+        -webkit-user-drag: none;
+        user-select: none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+    }
+
+    .part-one {
+        color: rgb(126, 128, 131);
+    }
+
+    .part-two {
+        color: rgb(239, 65, 53);
+    }
+}
+
+
+/*configuracion de estilos home*/
+.cartas {
+
+    background-color: #f4f4f4;
+    padding: 45px 30px 30px;
+    margin-bottom: 3rem;
+    border-radius: 15px;
+    box-shadow: 0 2px 5px 1px rgb(64 60 67 / 16%);
+    align-items: center;
+    position: relative;
+    transition: all 300ms;
+    cursor: pointer;
+
+
+    .color {
+        color: #636363 !important;
+        transition: all 300ms;
+    }
+
+    p {
+        font-family: CalibriBold !important;
+        color: #44494D;
+    }
+
+    h3 {
+        font-family: corisandebold !important;
+        color: #44494D;
+    }
+
+
+    .conteo {
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        padding: 7px;
+        background-color: #f8f7f5;
+        margin: 0 auto;
+        border: 2px;
+        border-style: solid;
+        border-color: #7b7874 !important;
+    }
+}
+
+.cartas:hover {
+    transform: scale(1.15);
+    background-color: #ff4d4d;
+    color: #f4f4f4 !important;
+
+    h3 {
+        color: #f4f4f4 !important;
+    }
+
+    p {
+        color: #f4f4f4 !important;
+    }
+
+    .color {
+        color: #f4f4f4 !important;
+    }
+
+    .conteo {
+        color: #44494D;
+        border-color: #f4f4f4 !important;
+    }
+}
+
+.tamanoCard {
+    width: 200px !important;
+}
+
+.margenes {
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.container {
+
+    .recuadro {
+        border-radius: 15px;
+        box-shadow: 0 2px 5px 1px rgb(64 60 67 / 16%);
+        height: auto;
+        width: 100%;
+        // background:rgba(227, 225, 227, 0.45); 
+        background-color: #ffffff;
+        background-image: url('/assets/icons/Unionf.png');
+        height: 100%;
+
+        /* Center and scale the image nicely */
+        background-position: right;
+        background-repeat: no-repeat;
+        // background-size: cover;
+    }
+
+    .mains {
+        //maion de cuadro blanco para reutilizar componetes
+        border-radius: 15px;
+        box-shadow: 0 2px 5px 1px rgb(64 60 67 / 16%);
+        height: auto;
+        width: 100%;
+        // background:rgba(227, 225, 227, 0.45); 
+        background-color: #ffffff;
+        background-image: url('/assets/icons/Unionf.png');
+        height: 100%;
+
+        /* Center and scale the image nicely */
+        background-position: right;
+        background-repeat: no-repeat;
+        margin: 2rem 2rem;
+        padding: 2rem 2rem 2rem 2rem;
+        // background-size: cover;
+
+
+    }
+
+    h2 {
+        font-family: corisandebold !important;
+    }
+    h4 {
+        font-family: corisandebold !important;
+    }
+    
+
+}
+
+//implementacion de estilos componete busqueda
+
+.fa {
+    float: right;
+    color: #FF4D4D !important;
+}
+
+.ngb-dp-weekday {
+    color: #ff4d4d !important;
+}
+
+.bg-primary {
+    background-color: #ff4d4d !important;
+}
+
+.ngb-dp-navigation-chevron {
+    color: #ff4d4d;
+}
+
+.ngb-dp-arrow-btn {
+    background: transparent !important;
+    box-shadow: 0 0 #403c4329 !important;
+}
+
+//organizacion de listados reportes de ca
+/*.items {
+
+    li {
+        display: inline;
+        list-style: none;
+        margin-right: 1rem;
+        font-family: CalibriRegular;
+
+        h5 {
+            font-family: CalibriRegular;
+            display: inline;
+        }
+
+
+    }
+
+
+
+}
+*/
+
+
+//implementacion de conteo y estilos hover taras
+     .tareasad {
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            padding: 8px 5px 5px 5px;
+            background-color: #ffffff;
+            margin: 0 auto;
+            border: 2px;
+            border-style: solid;
+            border-color: #FF4D4D  !important;
+            font-size:0.9vw;
+            cursor: pointer;
+            transition: all 300ms;
+
+            h5 {
+                font-family: CalibriRegular;
+            }
+        
+        }
+        
+        .tareasad:hover{
+            border-color: #6A6C6F  !important;
+        }
+
+
+        .colores {
+
+            color: #FF4D4D !important;
+            transition: all 300ms;
+            cursor: pointer;
+        }
+        
+    
+        .colores:hover {
+            color: #6A6C6F !important;
+        }
+
+
+.targetas {
+    width: 70%;
+    height: auto;
+    //   text-align: center;
+    background-color: #ffffff !important;
+    border-radius: 1rem;
+ //   padding: 5px 0px;
+     padding: 5px 0px;
+    transition: all 300ms;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    cursor: pointer;
+
+    .bg-primary {
+        background-color: #FF4D4D !important;
+        transition: all 300ms;
+    }
+
+    p {
+        margin-top: 0;
+        margin-bottom: 0rem !important;
+        font-family: CalibriRegular;
+    }
+
+}
+
+.targetas:hover {
+
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    //box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+
+    .bg-primary {
+        background-color: #6A6C6F !important;
+    }
+
+}
+
+.listas {
+
+    li {
+        margin-bottom: 10px;
+    }
+
+}
+
+/*configuracion estilos paginacion*/
+
+.page-link:hover {
+    z-index: 2;
+    color: #FF4D4D;
+    text-decoration: none;
+    background-color: #e9ecef;
+    border-color: #dee2e6;
+}
+
+.page-link {
+    position: relative !important;
+    display: block !important;
+    padding: .5rem .75rem !important;
+    margin-left: -1px !important;
+    line-height: 1.25 !important;
+    color: #FF4D4D !important;
+    background-color: #fff !important;
+    border: 1px solid #dee2e6 !important;
+    box-shadow: 0 2px 5px 1px rgb(64 60 67 / 16%) !important;
+}
+
+.page-item.active .page-link {
+    z-index: 1 !important;
+    color: #fff !important;
+    background-color: #FF4D4D !important;
+    border-color: #FF4D4D !important;
+    box-shadow: 0 2px 5px 1px rgb(64 60 67 / 16%) !important;
+}
+
+
+/*drombon reportes menu con icono tareas*/
+.dropdown {
+
+    a {
+        color: #6A6C6F !important;
+        font-family: CalibriRegular;
+        transition: all 300ms;
+    }
+
+
+    .colores {
+        transition: all 300ms;
+        color: #6A6C6F !important;
+    }
+
+    .colores:hover {
+        color: #FF4D4D !important;
+    }
+
+}
+/*implementacion de estilos tablas*/
+.tabla{
+    font-family: CalibriRegular;
+    .margen{
+        padding-left: 5rem;
+    }
+    strong{
+        font-family: corisandebold;
+    }
+}
+
+
+/*configuraciones de modal*/
+.modal-body{
+    background-color: #f8f7f5;
+    .marco{
+        border-radius: 15px 15px 15px 15px; 
+        background-color: #ffffff;
+        margin: 10px 20px 0px;
+        padding: 20px 0px 20px;
+    }
+}
+
+.modal-content{
+    border-radius: 0.8rem !important;
+}
+
+ul{
+    list-style: none;
+    }
+    
+    .textomodal {
+        font-family: CalibriBold;
+        color: #34393e;
+    }
+
+
+//configuracion de estilos lista detalle documento
+.listas{
+    list-style: none;
+}
+
+.icono{
+    color: #ff4d4d;
+    transition: all 300ms;
+    cursor: pointer;
+}
+.icono:hover{
+    color: #838281;
+    transition: all 300ms;
+}
+
+.rechazo{
+    color: #2d3135;
+    transition: all 300ms;
+}
+.rechazo:hover{
+    color: #ff4d4d;
+    cursor: pointer;
+}
+
+//cambio de estilos de  de campos numericos
+
+/*formularios*/
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+input[type=number] { -moz-appearance:textfield; }
+
+
+
+.dark-modal .modal-content {
+    background-color: transparent;
+    color: white;
+    border:none !important;
+}
+
+

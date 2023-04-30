@@ -1,0 +1,116 @@
+<div class="modal-header">
+    <h5 class="textomodal">Reasignaciones de tareas</h5>
+    <button type="button" class="btn-close" aria-label="Close" (click)="cerrar()"></button>
+  </div>
+  <form>
+    <div class="modal-body">
+  
+  
+  
+      <div id="carouselExampleControls"
+           class="carousel slide" 
+           data-bs-touch="false">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="marco">
+
+                <h6 class="text-center mb-3">Seleccione el proceso que desea realizar</h6>
+
+                       <div class="row">
+                        <div class="col">
+                            <div class="mb-3 ps-3 pe-3">
+                                <label class="form-label">Solicitud</label>
+                                <input type="text" class="form-control" placeholder="informacion actual">
+                              </div>
+                        </div>
+                        <div class="col">
+                            <div class="mb-3  ps-3 pe-3">
+                                <label class="form-label">Nombres Apellidos:</label>
+                                <input type="text" class="form-control" placeholder="Serial">
+                              </div>    
+                        </div>
+
+                       </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-3 ps-3 pe-3">
+                                <label class="form-label">Número identidad:</label>
+                                <input type="text" class="form-control" placeholder="Serial">
+                            </div>
+            
+
+                        </div>
+                        <div class="col">
+                            <div class="mb-3  ps-3 pe-3">
+                                <label class="form-label">Fecha:</label>
+                                <input type="text" class="form-control" placeholder="Serial">
+                            </div>
+            
+                        </div>
+
+                    </div>   
+
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-3  ps-3 pe-3">
+                                <label class="form-label">Estado:</label>
+                                <input type="text" class="form-control" placeholder="Serial">
+                            </div>
+                        </div>
+                    <div class="col">
+                        <div class="mb-3 ps-3 pe-3">
+                            <label class="form-label">Usuario:</label>
+                            <select class="form-select form-select-sm mb-2" aria-label=".form-select-sm example">
+                                <option selected>Opciones</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                              </select>
+                        </div> 
+                    </div>
+                    </div>
+
+          <div class="row">
+            <div class="col">
+                <div class="mb-3  ps-3 pe-3">
+                    <label 
+                    class="form-label">Observaciones</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="mb-3 ps-3 pe-3 mt-3 text-center">
+                            <button type="submit" 
+                            class="btn btn-primary me-3" 
+                            (click)="cerrar()"
+                            >Cancelar</button>
+    
+                          <button type="submit" 
+                            class="btn btn-primary ps-3"
+                            (click)="cerrar()"
+                            >Re asignar</button>
+              
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+
+          
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+  
+      </div>
+
+  
+  
+    <form>
+  
+      <div class="modal-footer">
+  
+        </div>

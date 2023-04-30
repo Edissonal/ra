@@ -1,0 +1,81 @@
+
+
+<section style="background-color: #f8f7f5;"  class="animate__animated animate__fadeIn">
+
+<div class="container">
+
+  <section class=" d-flex flex-column min-vh-100">
+
+        <div class="recuadro mt-5">
+           
+    <div class="row text-center justify-content-md-center"   (window:resize)="onResize($event)">
+
+
+        <h2 class="mb-5 mt-3">Servicios Acreditados</h2>
+
+    
+        <div class="col  margenes col col-lg-2  col-md-4   col-sm-9   col-xs-12"  *ngFor="let item of items">
+            <div [class]="validar()" (click)="reDireciones(item.pagina)">
+                <i [class]="item.logo"></i>
+                <h3>{{item.titulo}}</h3>
+                <p>{{item.texto}}</p>
+
+                <div class="conteo">{{item.conteo}}</div>
+
+            </div>
+        </div>
+    
+    
+    <!--
+    
+    <div class="col  margenes">
+            <div class="cartas" style="width: 200px;">
+                <i class="fa-solid fa-briefcase fa-5x color"></i>
+                <h3>Emision</h3>
+                <p>CA</p>
+
+                <div class="conteo">331</div>
+
+            </div>
+        </div>
+           
+        <div class="col  margenes">
+            <div class="cartas" style="width: 200px;">
+                <i class="fa-solid fa-sheet-plastic fa-5x color"></i>
+                <h3>Servicio al cliente</h3>
+                <p></p>
+
+                <div class="conteo">99</div>
+
+            </div>
+        </div>
+    
+  
+        <div class="col  margenes">
+            <div class="cartas" style="width: 200px;">
+                <i class="fa-solid fa-truck-fast fa-5x color"></i>
+                <h3>Logistica</h3>
+                <p>&nbsp;</p>
+
+                <div class="conteo">23</div>
+
+            </div>
+        </div>
+    
+-->
+
+ 
+
+
+
+
+
+    </div>
+</div>
+
+    </section>
+
+
+</div>
+
+</section>
