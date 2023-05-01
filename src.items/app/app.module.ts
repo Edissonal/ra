@@ -8,7 +8,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ModulosModule } from './ui/modulos/modulos.module';
 import { HomeComponent } from './ui/pages/home/home.component';
 import { HttpClientModule } from '@angular/common/http';
-import { CustomAdapter, CustomDateParserFormatter } from './domain/services/forms.service';
+
 
 
 
@@ -29,8 +29,7 @@ import { CustomAdapter, CustomDateParserFormatter } from './domain/services/form
     ModulosModule,
     
   ],
-  providers: [		{ provide: NgbDateAdapter, useClass: CustomAdapter },
-		{ provide: NgbDateParserFormatter, useClass: CustomDateParserFormatter }],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

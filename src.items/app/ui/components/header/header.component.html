@@ -1,0 +1,24 @@
+<header>
+<nav class="navbar navbar-expand-lg navbar-light bg-light bg-faded">
+    
+    <img src="assets/imgs/Logo.png" width="200px" class="logo"/>
+
+    <button class="navbar-toggler navbar-toggler-right" type="button"  data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    <div  class="navbar-collapse me-auto" 
+          *ngIf="muestra"
+          >
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li  class="nav-item mt-3"><i class="fa-solid fa-user fa-2x"></i></li>
+          <li  class="nav-item mt-3"><h5>!Bienvenido {{usuario.user}}!</h5></li>
+          <li  class="nav-item mt-3" (click)="redireciona()"><i class="fa-solid fa-power-off fa-2x boton"></i></li>
+          <li class="nav-item mt-1">
+
+          </li>
+        </ul>
+      </div>
+
+</nav>
+</header>
+

@@ -1,0 +1,109 @@
+
+<section class="banner mb-5">
+  <app-logos></app-logos>
+</section>
+
+
+<section class="d-flex flex-column min-vh-100">
+<div class="row"  >
+    <div class="col col-md"></div>
+    <div [class]="validar()">
+        
+        <div class="margencon" (window:resize)="onResize($event)">
+
+            <div class="mb-3">
+                <p class="title-cetritransaccional mb-3 mt-4 text-center"><label class="part-one">Cert</label><label class="part-two">Central</label></p>
+                <p class="textos"><small>Ingresa los siguientes datos para acceder a la plataforma</small></p>
+
+            </div>
+        <form  (ngSubmit)="autenticarRoll()" autocomplete="off" [formGroup]="loginform">
+            <div class="mb-3">
+                <label class="form-label">Usuario</label>
+                <div class="input-group mb-3">
+                    <button class="btn btn-outline-secondary" type="button" id="button-addon2"><i class="fa-solid fa-user-tie"></i></button>
+                    <input type="text" 
+                           class="form-control" 
+                           placeholder="Username" 
+                           formControlName="usuario"
+                           >
+                  </div>
+                <div  class="form-text text-danger animate__animated animate__fadeIn animate__fast"
+                       *ngIf="campoEsValido('usuario')"
+                       >usuario invalido</div>
+              </div>
+             <!-- <div class="mb-3">
+                <label class="form-label">Contraseña</label>
+                <div class="input-group mb-3">
+                    <button class="btn btn-outline-secondary" type="button" id="button-addon2"><i class="fa-solid fa-lock"></i></button>
+                    <input type="text" 
+                           class="form-control" 
+                           placeholder="Pasword"
+                           formControlName="password"
+                           >
+                  </div>
+                <div  class="form-text text-danger animate__animated animate__fadeIn animate__fast"
+                      *ngIf="campoEsValido('password')"     
+                >Identificación inválida</div>
+              </div>-->
+
+              <div class="mb-3">
+                <label class="form-label">Codigo OTP</label>
+                <div class="input-group mb-3">
+                    <button class="btn btn-outline-secondary" type="button" id="button-addon2"><i class="fa-solid fa-lock"></i></button>
+                    <input type="number" 
+                           class="form-control" 
+                           placeholder="Codigo Opt" 
+                           formControlName="opt"
+                           #palabra
+                           [class.is-invalid]="campoEsValido('opt')"
+                           (keyup)="caracTeres(palabra.value)"  
+                           >
+                  </div>
+                <div  
+                      *ngIf="campoEsValido('opt') || errores"   
+                      class="form-text text-danger animate__animated animate__fadeIn animate__fast"
+
+                     >{{mensaje}}</div>
+              </div>
+
+<!--
+              <div class="mb-3">
+                <label class="form-label">Perfil</label>
+                <input class="form-control" 
+                       list="datalistOptions" 
+                       id="exampleDataList" 
+                       placeholder="perfil"
+                       name="roll"
+                       formControlName="perfil"
+                       [(ngModel)]="roll">
+                <datalist id="datalistOptions">
+                  <option value="Director">
+                  <option value="Coordinador RA">
+                  <option value="Coordinador CA">
+                  <option value="Coordinador Servicio al cliente">
+                  <option value="Coordinador logistico">
+                  <option value="Operador Ra">
+                  <option value="Operador CA">
+                  <option value="Operador servicio al cliente"></option>
+                  <option value="Operador  operador logistico"></option>
+                </datalist>
+                <div  
+                
+                *ngIf="campoEsValido('perfil')"   
+                class="form-text text-danger animate__animated animate__fadeIn animate__fast"
+                     >Perfil invalido</div>
+              </div>
+-->
+              <div class="mb-3 text-center">
+            <button type="submit"
+                    class="btn btn-primary"
+                    >Validar</button>
+                </div>
+     
+        </form>
+    </div>
+    </div>
+      <div class="col col-md"></div>
+</div>
+</section>
+

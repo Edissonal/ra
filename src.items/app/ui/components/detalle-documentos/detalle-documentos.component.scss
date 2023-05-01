@@ -1,0 +1,38 @@
+#enviar{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer !important;
+    }
+    
+
+    #div_file{
+        position: relative ;
+    //    margin: 10px;
+        padding: 3px 7px 5px 5px;
+        width: 100%;
+        height: 30px;
+        background-color: #ff4d4d;
+      //  border: #6a6c6f 3px dashed;
+        border-radius: 15px;
+        cursor: pointer !important;
+        transition: all 300ms;
+
+    
+    }
+    #div_file:hover{
+        background-color: #838281;
+        cursor: pointer !important;
+    }
+
+    #texto{
+        text-align: center;
+        color: #fff;
+     //   font-family: corisandebold;
+        cursor: pointer !important;
+        }

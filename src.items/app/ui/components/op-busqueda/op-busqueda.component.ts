@@ -25,8 +25,8 @@ export class OpBusquedaComponent implements OnInit {
   @ViewChild('anima', { read: ElementRef, static:false }) anima: any;
   @ViewChild('tarjeta', { read: ElementRef, static:false }) tarjeta: any;
   //formaForm!:FormGroup;
-  fechaini!: any;
-  fechafi!:  any ;
+  fechaini!: NgbDateStruct;
+  fechafi!:  NgbDateStruct ;
   items:any[]=[];
   itemsPen:any[]=[];
   vista:boolean =false;
@@ -185,7 +185,9 @@ fechas(dato:any){
     let fechaa=      this.busquedasForm.controls['fechai'].value;  
     let fechab=      this.busquedasForm.controls['fechafi'].value;  
     let soli=      this.busquedasForm.controls['solicitud'].value; 
-
+    
+    console.log(this.fechaini);
+    console.log(this.fechafi);
      
      if(!fechaa || (typeof fechaa === 'string' && fechaa.length == 0)) {
      // console.log("CAMBIO ", fechaa);
@@ -207,17 +209,16 @@ fechas(dato:any){
       }, {emitEvent: false});
     }
 
+    let data1 = `${valora?.year}-${valora?.month}-${valora?.day}`;
+    let data2 = `${valorb?.year}-${valorb?.month}-${valorb?.day}`;
 
-      let dateParts = fechaa?.split("-") || [];
-      let dateParts2 = fechab?.split("-") || [];
-      let valida = new Date(dateParts[2],dateParts[1],dateParts[0]);
-      let validb = new Date(dateParts2[2],dateParts2[1],dateParts2[0]);
+    console.log(data1);
+    
      let fecha = new Date();
+     let valida = new Date(data1);
+     let validb = new Date(data2);
      fecha.setMonth(fecha.getMonth() +1);
-     //filtro
- 
 
-     
 
 
       if(valida > fecha){
@@ -286,93 +287,113 @@ fechas(dato:any){
     let  solicitud = this.busquedasForm.controls['solicitud'].value;
     let fechai = this.busquedasForm.controls['fechai'].value;
     let fechaf = this.busquedasForm.controls['fechafi'].value;
+        fechai =`${fechai?.year}-${fechai?.month}-${fechai?.day}`;
+        fechaf =`${fechaf?.fechaf}-${fechaf?.month}-${fechaf?.day}`;
 
-   //validacion de la palabra y demas vacios
-    if(solicitud !== null && fechai === null  && fechaf === null  ){
-       //quietar validators
-       this.restaBlecerControls();
-     console.log('entro');
+  /*  let fechai = `${dato1.year}-${dato1.month}-${dato1.day}`;
+    let fechaf = `${dato2.year}-${dato2.month}-${dato2.day}`;
+    */
 
+   /* if(solicitud === null && fechai === null  && fechaf === null  ){
 
-  let codigo = this.busquedasForm.controls["solicitud"].value;
-   console.log(codigo);
-
-
-   this.taks.filtrarSolicitudes(codigo)
-   .subscribe(  {
-     next: (res: any) => {
-       
-      console.log(res);
-       if(res.length == 0 ){
-         this.messageError ='Solicitud no encontrada';
-         this.forms.eventos("alerta");
-       }
-       else if(res.length > 0 ){
-         let [data] = res;
-         this.alert.showReasiganciones(data);
-       }
-  },
-  error: (error) => {
-    console.log('error en el subscriber filtro solicitudes');
-  }
-  
- })
-
-     } 
-
-     //solo fecha innicial
-     if(solicitud === null && fechai !== null  && fechaf === null  ){
-      //quietar validators
-    console.log('entro');
-    this.restaBlecerControls();
-
-     let valores = this.items.filter(item => ( new Date(fechai)<= new Date(item.fechai) ));
-  
-     this.items =[];
-     this.items= valores;
-     console.log(this.items);
-     console.log(valores);
-
-    } 
- //solo fecha final 
-    if(solicitud === null && fechai === null  && fechaf !== null  ){
-      //quietar validators
-      this.restaBlecerControls();
-
-     let valores = this.items.filter(item => ( new Date(fechaf)>= new Date(item.fechai) ));
-  
-     this.items =[];
-     this.items= valores;
-     console.log(this.items);
-     console.log(valores);
-  
-    } 
-
- //solo fecha final y fecha final
-    if(solicitud === null && fechai !== null  && fechaf !== null  ){
-   
-     let valores = this.items.filter(item => (new Date(item.fechai) >= new Date(fechai) && new Date(item.fechai) <= new Date(fechaf)));
-  
-      this.items =[];
-      this.items= valores;
-      console.log(this.items);
-      console.log(valores);
-   
-      this.restaBlecerControls();
     }
+    */
+
+    console.log(this.busquedasForm);
+
+
+
+
+     //validacion de la palabra y demas vacios
+    if(solicitud !== null && fechai === null  && fechaf === null  ){
+      //quietar validators
+      this.restaBlecerControls();
+    console.log('entro');
+
+
+ let codigo = this.busquedasForm.controls["solicitud"].value;
+  console.log(codigo);
+
+
+  this.taks.filtrarSolicitudes(codigo)
+  .subscribe(  {
+    next: (res: any) => {
+      
+     console.log(res);
+      if(res.length == 0 ){
+        this.messageError ='Solicitud no encontrada';
+        this.forms.eventos("alerta");
+      }
+      else if(res.length > 0 ){
+        let [data] = res;
+        this.alert.showReasiganciones(data);
+      }
+ },
+ error: (error) => {
+   console.log('error en el subscriber filtro solicitudes');
+ }
+ 
+})
+
+    } 
+    
+
+    //solo fecha innicial
+    if(solicitud === null && fechai !== null  && fechaf === null  ){
+     //quietar validators
+   console.log('entro');
+   this.restaBlecerControls();
+
+    let valores = this.items.filter(item => ( new Date(fechai)<= new Date(item.fechai) ));
+ 
+    this.items =[];
+    this.items= valores;
+    console.log(this.items);
+    console.log(valores);
+
+   } 
+   
+//solo fecha final 
+   if(solicitud === null && fechai === null  && fechaf !== null  ){
+     //quietar validators
+     this.restaBlecerControls();
+
+    let valores = this.items.filter(item => ( new Date(fechaf)>= new Date(item.fechai) ));
+ 
+    this.items =[];
+    this.items= valores;
+    console.log(this.items);
+    console.log(valores);
+ 
+   } 
+
+//solo fecha final y fecha final
+   if(solicitud === null && fechai !== null  && fechaf !== null  ){
+  
+    let valores = this.items.filter(item => (new Date(item.fechai) >= new Date(fechai) && new Date(item.fechai) <= new Date(fechaf)));
+ 
+     this.items =[];
+     this.items= valores;
+     console.log(this.items);
+     console.log(valores);
+  
+     this.restaBlecerControls();
+   }
+
+
+
 
 
 if (this.busquedasForm.invalid)  {
- // this.restaBlecerControls();
-
-  this.busquedasForm.markAllAsTouched();
-  this.reTbecerControles();
-  this.messageError ='Seleccione al menos un valor de búsqueda';
-  this.forms.eventos("alerta");
-  return;
-  
-}
-
+  // this.restaBlecerControls();
+ 
+   this.busquedasForm.markAllAsTouched();
+   this.reTbecerControles();
+   this.messageError ='Seleccione al menos un valor de búsqueda';
+   this.forms.eventos("alerta");
+   return;
+   
+ }
     
   }
 
